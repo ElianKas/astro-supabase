@@ -1,0 +1,38 @@
+---
+import { supabase } from '../lib/supabase';
+
+//ssr page
+export const prerender = false;
+
+// Example usage of supabase
+/* const { data, error } = await supabase.from('cities').select('*');
+console.log(data, error); */
+---
+
+<html lang='en'>
+	<head>
+		<meta charset='utf-8' />
+		<link
+			rel='icon'
+			type='image/svg+xml'
+			href='/favicon.svg'
+		/>
+		<meta
+			name='viewport'
+			content='width=device-width'
+		/>
+		<meta
+			name='generator'
+			content={Astro.generator}
+		/>
+		<title>Astro</title>
+	</head>
+	<body>
+		<h1 class='text-[3rem]'>Astro</h1>
+		<!-- {
+			data?.map((entry) => {
+				return <p>{entry.id}</p>;
+			})
+		} -->
+	</body>
+</html>
